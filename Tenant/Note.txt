@@ -1,2 +1,5 @@
 npm init -y(installs package json)
 npm install express mongoose cors
+To Start-
+node server.js(to start backend{mongoDB})
+live server then in html
