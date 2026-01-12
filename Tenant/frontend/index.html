@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tenant Manager</title>
+
+</head>
+<body>
+<style>
+body { 
+    font-family: Arial; background:#000000; padding:20px; 
+}
+.container {
+     background:rgb(255, 217, 0); padding:20px; max-width:900px; margin:auto; border-radius:8px;
+     }
+.form input, .form select, button { 
+    margin:5px; padding:8px; 
+}
+table {
+     width:100%; margin-top:20px; border-collapse: collapse; 
+    }
+th, td { 
+    border:1px solid #c300ff; padding:10px; text-align:center; 
+}
+button { 
+    cursor:pointer; 
+    }
+</style>
+<div class="container">
+  <h1>Tenant Manager</h1>
+
+  <h3>Add Tenant</h3>
+  <div class="form">
+    <input id="name" placeholder="Tenant Name">
+    <input id="room" placeholder="Room No">
+    <input id="rent" type="number" placeholder="Rent Amount">
+    <select id="status">
+      <option>Paid</option>
+      <option>Unpaid</option>
+    </select>
+    <input id="contact" placeholder="Contact Number">
+    <input id="joinDate" type="date">
+    <button id="saveBtn">Save Tenant</button>
+    <button id="updateBtn" style="display:none;">Update</button>
+  </div>
+
+  <input id="search" placeholder="Search">
+  <select id="filter">
+    <option>All</option>
+    <option>Paid</option>
+    <option>Unpaid</option>
+  </select>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Room</th>
+        <th>Rent</th>
+        <th>Status</th>
+        <th>Contact</th>
+        <th>Join Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="tenantTable"></tbody>
+  </table>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
